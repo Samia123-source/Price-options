@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "../Link/Link";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose  } from "react-icons/ai";
 
 
 const Navbar = () => {
@@ -15,8 +15,13 @@ const Navbar = () => {
 ];
     return (
         <nav>
-            <div onClick={}>
-                <AiOutlineMenu className="text-3xl md:hidden"></AiOutlineMenu>
+            <div className= 'md:hidden text-2xl' onClick={() => setOpen(!open)}>
+                {
+                    open === true ? 
+                    <AiOutlineClose></AiOutlineClose>
+                     : <AiOutlineMenu className=" "></AiOutlineMenu>
+                }
+                
             </div>
             <ul className="md:flex">
                 {
