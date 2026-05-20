@@ -14,7 +14,7 @@ const Navbar = () => {
   { id: 5, path: "/contact", name: "Contact" }
 ];
     return (
-        <nav>
+        <nav className="text-black p-6 bg-yellow-200">
             <div className= 'md:hidden text-2xl' onClick={() => setOpen(!open)}>
                 {
                     open === true ? 
@@ -23,7 +23,7 @@ const Navbar = () => {
                 }
                 
             </div>
-            <ul className="md:flex">
+            <ul className="md:flex absolute px-6 bg-yellow-200 shadow-lg">
                 {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
             }
